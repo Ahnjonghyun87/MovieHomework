@@ -1,0 +1,71 @@
+.title {
+ 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.wrap1 {
+    background-color: red;
+    width: 400px;
+    height: 300px;
+    margin: auto;
+}
+
+.input-group {
+
+    
+
+   padding-left: 105px;
+}
+
+.form-control {
+
+    height: 22px;
+
+}
+
+.btn2 {
+    height: 30px;
+    
+}
+
+
+.tags{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    
+}
+
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: row;
+    gap: 20px;
+    margin: 200px
+    
+}
+.card {
+    width: 350px;
+    height: 700px;
+    margin-top: 50px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 30px;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+
