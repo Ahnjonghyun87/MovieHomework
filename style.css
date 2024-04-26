@@ -1,22 +1,27 @@
-.title {
- 
+.wrap1 {
+    
+    background-color: black;
+    width: 400px;
+    height: 250px;
+    margin: auto;
+    margin-top: 70px;
+    border-radius: 3px; 
+}
 
+.title {
+   
+    color: white;   
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     
 }
-.wrap1 {
-    background-color: red;
-    width: 400px;
-    height: 300px;
-    margin: auto;
-}
+
 
 .input-group {
 
-    
+    margin-top: 100px;
 
    padding-left: 105px;
 }
@@ -33,14 +38,29 @@
 }
 
 
-.tags{
-    
+.wrap2 {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;   
+    gap: 20px;
     align-items: center;
     justify-content: center;
-    background-color: green;
+}
+
+
+
+
+
+
+
+.btns{     
     
+      }
+
+.btns>button {
+    height: 40px;
+    
+    border: 2px black
+
 }
 
 
