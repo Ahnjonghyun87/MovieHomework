@@ -1,3 +1,11 @@
+body {
+    background-color: black;
+}
+
+
+
+
+
 .wrap1 {
     
     background-color: black;
@@ -6,6 +14,7 @@
     margin: auto;
     margin-top: 70px;
     border-radius: 3px; 
+    border:1px solid white
 }
 
 .title {
@@ -57,9 +66,10 @@
       }
 
 .btns>button {
+    background-color: transparent;
     height: 40px;
-    
-    border: 2px black
+    color: aliceblue;
+    border: 2px #ffffff
 
 }
 
