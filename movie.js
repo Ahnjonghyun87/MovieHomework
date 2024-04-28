@@ -1,5 +1,3 @@
-
-    
 const options = {
   method: 'GET',
   headers: {
@@ -10,30 +8,44 @@ const options = {
 
 fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
   .then(response => response.json())
-  .then(response => {
-    console.log(response);
-    const movies = response.results;
-    console.log(movies);
-    const moviesElement = document.getElementById('movies');
+  .then(data => {
+    const movies = data.results.slice(0, 20); 
+    const cardsContainer = document.querySelector('.cards');
+
     movies.forEach(movie => {
-      const movieCard = document.createElement('div');
-      movieCard.classList.add('movieCard');
-      movieCard.innerHTML = `
-        <div class="movieCard">
-          <img src="${movie.poster_path}"></img>
-          <h2>${movie.title}</h2>
-          <p>${movie.overview}</p>
-          <p>${movie.vote_average}</p>
-        </div>
-      `;
-      moviesElement.appendChild(movieCard);
+      if (!movie.poster_path) return; 
+
+      const card = document.createElement('div');
+      card.classList.add('card');
+      card.id = movie.id;
+
+      const title = document.createElement('h2');
+      title.textContent = movie.title;
+
+      const image = document.createElement('img');
+      image.src = 'https://image.tmdb.org/t/p/w500' + movie.poster_path;
+      image.alt = '영화 이미지';
+
+      const overview = document.createElement('p');
+      overview.textContent = '줄거리: ' + movie.overview;
+
+      const rating = document.createElement('p');
+      rating.textContent = '별점: ' + movie.vote_average;
+
+      card.appendChild(title);
+      card.appendChild(image);
+      card.appendChild(overview);
+      card.appendChild(rating);
+
+      
+
+      card.addEventListener('click', () => {
+        alert('ID:' + card.id);
+      });
+
+      cardsContainer.appendChild(card);
+
+      
     });
   })
   .catch(err => console.error(err));
-    
-    
-   
-    
-
-
-
